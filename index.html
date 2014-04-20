@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+video {
+  display: none;
+}
+#canvas_m, #horizGraphCanvas {
+  transform: scaleX(-1);
+  -webktit-transform: scaleX(-1);
+}
+#viz {
+  text-align: left;
+}
+</style>
+<link href="css/reveal.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <section>
+        <h1>JS Motion Tracking Experiment</h1>
+        <div>
+          A hack-per-day by Anthony Bau
+        </div>
+        <div>
+          Approve use of your webcam, and swipe left/right/up/down in midair to navigate.
+        </div>
+      </section>
+      <section>
+        <h1>Usage Tips</h1>
+        <div>
+          <ul>
+            <li>Things work best with your hand one keyboard-length away from your webcam</li>
+            <li>Make your palm face the direction of motion (hand perpendicular to screen)</li>
+            <li>One motion should take about the time it takes to exhale (3/4 of a second)</li>
+            <li>Remember when you are moving that your <b>arm and shoulders</b> are in frame, and might be registered as gestures.</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h1>About</h1>
+        <div>
+          <ul>
+            <li>The motion tracker takes the absolute difference between consecutive frames</li>
+            <li>Computes the tracked object as the centroid of pixels that changed</li>
+            <li>Gestures are contiguous blocks of movement that are not interrupted by a 200ms wait</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h1>Visualization</h1>
+        <div id="viz">
+          <video autoplay=true></video>
+          <canvas id="canvas_m"></canvas>
+          <canvas id="verticalGraphcanvas"></canvas>
+          <canvas id="horizGraphCanvas"></canvas>
+        </div>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h1>Filler Text 1</h1>
+        <div>
+          This slide's just here for filler text so you can see more stuff.
+        </div>
+      </section>
+      <section>
+        <h1>Filler Text 2</h1>
+        <div>
+          This slide's just here for filler text so you can see more stuff.
+        </div>
+      </section>
+      <section>
+        <h1>Filler Text 3</h1>
+        <div>
+          This slide's just here for filler text so you can see more stuff.
+        </div>
+      </section>
+    </section>
+  </div>
+</div>
+<script src="js/reveal.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
