@@ -7,6 +7,7 @@ module.exports = (grunt) ->
       build:
         files:
           'index.js': ['index.coffee']
+          'game.js': ['game.coffee']
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
 
