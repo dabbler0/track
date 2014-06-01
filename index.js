@@ -29,11 +29,11 @@
 
   navigator.webkitGetUserMedia({
     video: true
-  }, function(stream) {
+  }, (function(stream) {
     video.src = window.URL.createObjectURL(stream);
     localMediaStream = stream;
     return snapshot();
-  });
+  }), function() {});
 
   recentGesture = {
     xmin: 0,
