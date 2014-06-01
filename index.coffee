@@ -18,10 +18,10 @@ horizGraphCanvas.width = horizGraphCanvas.height = verticalGraphCanvas.width = v
 localMediaStream = null
 lastImageData = null
 
-navigator.webkitGetUserMedia video: true, (stream) ->
+navigator.webkitGetUserMedia video: true, ((stream) ->
   video.src = window.URL.createObjectURL stream
   localMediaStream = stream
-  snapshot()
+  snapshot()), ->
 
 recentGesture = {
   xmin: 0
